@@ -49,7 +49,7 @@ register() {
 
 onSaveComplete(response: any) {
   this.userService.persistirUserApp(response);
-  this.router.navigateByUrl('/blacklist');
+  this.router.navigateByUrl('/home');
 }
 
 onError(fail: any) {
