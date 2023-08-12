@@ -1,0 +1,41 @@
+<!--<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar navbar-dark bg-dark border-bottom box-shadow mb-3">
+      <div class="container">
+        <a class="navbar-brand" [routerLink]="['/home']">IMCNet</a>
+        <a class="navbar-brand" [routerLink]="['/blacklist']">Black List</a>
+        <a class="navbar-brand" [routerLink]="['/registro']">Registro</a>
+        <app-menu-user></app-menu-user>
+        <button class="navbar-toggler" type="button" data-target=".navbar-collapse"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" >
+          <ul class="navbar-nav flex-right">
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>-->
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar navbar-dark bg-dark border-bottom box-shadow mb-3">
+      <div class="container">
+        <div [ngSwitch]="userLogado()">
+          <!--<a class="navbar-brand" [routerLink]="['/home']">IMCNet</a>-->
+          <!--<img src="assets/imcnet.png" alt="">-->
+          <a *ngSwitchCase="true" class="navbar-brand" [routerLink]="['/blacklist']">Black List</a>
+          <a *ngSwitchCase="true" class="navbar-brand" [routerLink]="['/registro']">Registro</a>
+          <a *ngSwitchCase="true" class="navbar-brand" [routerLink]="['/botnet']">Botnet</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+          <app-menu-user></app-menu-user>
+          <ul class="navbar-nav flex-grow-1">
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
