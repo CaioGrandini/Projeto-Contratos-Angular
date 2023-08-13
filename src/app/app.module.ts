@@ -17,6 +17,7 @@ import { UserRegisterComponent } from './navegacao/user/user-register/user-regis
 import { UserService } from './navegacao/user/userServices';
 import { MenuUserComponent } from './navegacao/user/menu/menu.user.component';
 import { HomeComponent } from './navegacao/home/home.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HomeComponent } from './navegacao/home/home.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FileUploadModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false})]
   ],
   providers: [

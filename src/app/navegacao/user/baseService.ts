@@ -8,7 +8,6 @@ export abstract class BaseService {
     protected ObterHeaderFormData() {
         return {
             headers: new HttpHeaders({
-                'Content-Disposition': 'form-data; name="produto"',
                 'Authorization': `Bearer ${this.obterTokenUsuario()}`
             })
         };
@@ -22,7 +21,7 @@ export abstract class BaseService {
         };
     }
 
-    protected ObterAuthHeaderJson(){
+    public ObterAuthHeaderJson(){
         return {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
@@ -30,6 +29,8 @@ export abstract class BaseService {
             })
         };
     }
+
+    
 
     protected extractData(response: any) {
         return response.data || {};
