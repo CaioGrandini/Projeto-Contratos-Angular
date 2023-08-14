@@ -4,7 +4,7 @@
       <div class="container">
         <div [ngSwitch]="userLogado()">
           <a *ngSwitchCase="true" class="navbar-brand" [routerLink]="['/home']">Home</a>
-          <a *ngSwitchCase="true" class="navbar-brand" [routerLink]="['/importacao']">Importação</a>
+          <a *ngSwitchCase="true" class="navbar-brand" [routerLink]="['/importacao']">Importados</a>
           <a *ngSwitchCase="true" class="navbar-brand" [routerLink]="['/consulta']">Consulta</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
