@@ -1,0 +1,27 @@
+<main>
+    <h1>Consulta por CPF</h1>
+</main>
+<br>
+<form class="form" [formGroup]="form">
+    <div class="input-group mb-3">
+      <input matInput formControlName="cpf" name="cpf" type="text" class="form-control" placeholder="Pesquisar" aria-label="cpf">
+      <button class="btn btn-outline-secondary" type="button" (click)="pesquisarCpf()">Pesquisar</button>
+    </div>
+<table  class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th></th>
+        <th>atraso</th>
+        <th>valor</th>
+        <tr>
+    </thead>
+    <tbody *ngIf="consultas">
+      <tr>
+       <td></td>
+        <td>    
+          {{ consultas.atraso }}
+        </td>
+        <td>
+          {{ consultas.valor }} 
+        </td>
+      </tbody>

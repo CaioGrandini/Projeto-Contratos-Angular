@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CsvImportService } from './homeServices';
 import { HttpClient } from '@angular/common/http';
 import { BaseService } from '../user/baseService';
+import { Contrato } from './contrato';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,24 @@ import { BaseService } from '../user/baseService';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent extends BaseService {
+export class HomeComponent extends BaseService{
   selectedFile: File | null = null;
 
-  constructor(private http: HttpClient) { super() }
+  public contrato: Contrato[]
 
+  constructor(private http: HttpClient,
+    private CsvImportService: CsvImportService ) { super() }
+
+  ngOnInit(){
+
+    this.CsvImportService.ObterBase()
+    .subscribe({
+      next: contrato => {
+        this.contrato = contrato;
+      }
+    });
+  }
+ 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0];
   }

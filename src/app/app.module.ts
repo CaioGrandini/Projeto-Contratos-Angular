@@ -18,6 +18,8 @@ import { UserService } from './navegacao/user/userServices';
 import { MenuUserComponent } from './navegacao/user/menu/menu.user.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ImportacaoComponent } from './navegacao/importacao/importacao.component';
+import { ConsultaComponent } from './navegacao/consulta/consulta.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FileUploadModule } from 'ng2-file-upload';
     UserRegisterComponent,
     MenuUserComponent,
     HomeComponent,
+    ImportacaoComponent,
+    ConsultaComponent,
   ],
   imports: [
     BrowserModule,

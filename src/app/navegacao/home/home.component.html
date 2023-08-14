@@ -1,4 +1,48 @@
-<div>
+<main>
+  <h1>Importar arquivo para a base:</h1>
+</main>
   <input type="file" (change)="onFileSelected($event)">
-  <button (click)="uploadFile()">Upload</button>
-</div>
+  <button class="btn btn-outline-secondary" (click)="uploadFile()">Upload</button>
+<body>
+<br>
+<!--<main>
+  <h1>Visualizar Arquivo da Base</h1>
+  <button onclick="visualizarArquivo()">Visualizar Arquivo</button>
+</main>-->
+
+<table  class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th></th>
+      <th>Contrato</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Produto</th>
+      <th>Vencimento</th>
+      <th>Valor</th>
+      <tr>
+  </thead>
+  <tbody *ngFor="let contratos of contrato">
+    <tr>
+     <td></td>
+      <td>    
+        {{ contratos.contrato }}
+      </td>
+      <td>
+        {{ contratos.nome | titlecase}}  
+      </td>
+      <td>
+        {{ contratos.cpf }} 
+      </td>
+      <td>
+        {{contratos.produto}}
+      </td>
+      <td>
+        {{contratos.vencimento}}
+      </td>
+      <td>
+        {{contratos.valor}}
+      </td>
+    </tbody>
+    </table>
+    

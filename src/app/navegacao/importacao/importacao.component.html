@@ -1,0 +1,26 @@
+<main>
+    <h1>Importaçao de arquivo por usuario:</h1>
+</main>
+<table  class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th></th>
+        <th>Id</th>
+        <th>Arquivo</th>
+        <th>Usuario</th>
+        <tr>
+    </thead>
+    <tbody *ngFor="let imports of importacao">
+      <tr>
+       <td></td>
+        <td>    
+          {{ imports.id }}
+        </td>
+        <td>
+          {{ imports.nome | titlecase}}  
+        </td>
+        <td>
+          {{ imports.emailUsuario }} 
+        </td>
+      </tbody>
+      </table>
